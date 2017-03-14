@@ -9,6 +9,8 @@ if [[ "$user_exists" == 0 ]]; then
     echo "sshd started"
     sudo /usr/bin/svscan /services/ 
 else
+    echo "configuring daemontools for sshd"
+    sudo /workarea/setup_sshd
     echo "configuring user: $USER_NAME ..."
     sudo adduser --disabled-password --gecos '' --home /workarea --uid $USER_ID $USER_NAME > /dev/null 2>&1 
     sudo adduser $USER_NAME sudo > /dev/null 2>&1 

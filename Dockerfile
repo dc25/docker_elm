@@ -33,6 +33,4 @@ RUN apt-get update && apt-get install -y \
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN mkdir -p /workarea
-RUN chmod 777 /workarea
 COPY build_scripts /workarea
-RUN /workarea/setup_sshd

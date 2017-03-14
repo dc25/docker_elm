@@ -8,29 +8,17 @@ FROM ubuntu:16.10
 # pathogen and vim2hs together.  
 #
 # 2016-07-11 Tried taking it out again.
+#
 # 2016-07-11 Did not notice problems with vim but saw errors reported that 
 #            were not there before when running ./try-reflex . Leaving in.
+#
+# 2017-03-14 Tried taking this out again but had problems with tmux even in 
+#            minimal config.  Leaving in.
+#
 RUN locale-gen en_US.UTF-8  
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
-
-RUN apt-get update && apt-get install -y \
-    bzip2 \
-    cpio \
-    curl \
-    daemontools \
-    entr \
-    git \
-    net-tools \
-    openssh-server \
-    python \
-    tmux \
-    sudo \
-    vim-gtk 
-
-## enable sudo w/o password
-RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN mkdir -p /workarea
 COPY build_scripts /workarea

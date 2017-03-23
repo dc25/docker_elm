@@ -28,5 +28,12 @@ RUN apt-get update && apt-get install -y \
     sudo \
     vim-gtk 
 
+RUN apt-get update && apt-get install -y \
+    cpio \
+    curl \
+    entr \
+    net-tools \
+    python 
+
 RUN mkdir -p /workarea
 COPY build_scripts /workarea

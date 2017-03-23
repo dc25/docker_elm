@@ -20,5 +20,13 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
 
+RUN apt-get update && apt-get install -y \
+    daemontools \
+    git \
+    openssh-server \
+    tmux \
+    sudo \
+    vim-gtk 
+
 RUN mkdir -p /workarea
 COPY build_scripts /workarea

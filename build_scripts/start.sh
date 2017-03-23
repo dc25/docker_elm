@@ -9,8 +9,6 @@ if [[ "$user_exists" == 0 ]]; then
     echo "sshd started"
     sudo /usr/bin/svscan /services/ 
 else
-    echo "apt-get some basic tools"
-    /workarea/get_basic_tools
     echo "configuring daemontools for sshd"
     /workarea/setup_sshd
     echo "configuring user: $USER_NAME ..."

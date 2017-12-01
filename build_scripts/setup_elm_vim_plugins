@@ -1,8 +1,5 @@
 #! /bin/bash
 
-./install_node
-./install_elm
-
 mkdir -p $HOME/.vim/bundle
 cd $HOME/.vim/bundle
 

@@ -18,5 +18,8 @@ RUN su ${DEVL} -c ./install_elm
 COPY build_scripts/setup_elm_vim_plugins .
 RUN su ${DEVL} -c ./setup_elm_vim_plugins
 
+COPY build_scripts/elmBashrc .
+RUN su ${DEVL} -c "echo . elmBashrc" | tee -a .bashrc
+
 
 RUN chown -R ${DEVL} .

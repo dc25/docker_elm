@@ -1,0 +1,10 @@
+function rebu
+{
+    find . -type f -name '*.elm' | xargs ls | entr sh -c 'echo;echo;echo;echo;echo;elm-make Main.elm --output output/index.html; echo done'
+}
+
+cd 
+
+
+
+

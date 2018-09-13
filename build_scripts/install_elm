@@ -3,4 +3,9 @@
 # sudo npm install -g elm@0.16
 # sudo npm install -g elm@0.17
 # sudo npm install -g elm@0.15
-sudo npm install -g elm
+
+# As of today, 2018-02-20 the elm install requires --unsafe-perm
+# I don't know why.  Found this solution here: https://stackoverflow.com/questions/44878798/permission-denied-error-while-attempting-to-install-elm-with-sudo-on-ubuntu
+
+npm install --unsafe-perm -g elm
+# npm install -g elm

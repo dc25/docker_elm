@@ -3,6 +3,8 @@
 mkdir -p $HOME/.vim/bundle
 cd $HOME/.vim/bundle
 
+sudo apt-get install -y git
+
 git clone https://github.com/lambdatoast/elm.vim.git
 
 

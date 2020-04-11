@@ -1,6 +1,10 @@
 #! /bin/bash
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
-sudo apt-get install -y nodejs npm
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs 
+# sudo apt-get install -y nodejs npm
 sudo npm install -g npm@latest
+
 
 
